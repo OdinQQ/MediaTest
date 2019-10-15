@@ -1,3 +1,10 @@
 package com.example.mediatest
 
-interface DecoderStateListener
+interface DecoderStateListener {
+
+    fun onPrepared()
+
+    fun onPause()
+
+    fun onRunning()
+}

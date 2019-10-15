@@ -2,7 +2,12 @@ package com.example.mediatest
 
 import android.media.MediaFormat
 
+/***
+ * 解码器接口
+ */
 interface IDecoder {
+
+    /*----------------- 操作 -------------------*/
 
     fun start()
 
@@ -12,6 +17,8 @@ interface IDecoder {
 
     fun stop()
 
+    /*------------------- 状态 ---------------------*/
+
     fun isDecoding() : Boolean
 
     fun isSeeked() : Boolean
@@ -19,6 +26,8 @@ interface IDecoder {
     fun isStop(): Boolean
 
     fun setStateListener(listener: DecoderStateListener)
+
+    /*------------------- 信息 ---------------------*/
 
     fun getWidth() : Int
 
@@ -28,5 +37,5 @@ interface IDecoder {
 
     fun getMediaFormat() : MediaFormat
 
-
+    fun getTrack(): Int
 }
