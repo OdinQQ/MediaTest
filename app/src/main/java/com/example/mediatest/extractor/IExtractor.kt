@@ -1,4 +1,4 @@
-package com.example.mediatest
+package com.example.mediatest.extractor
 
 import android.media.MediaFormat
 import java.nio.ByteBuffer
@@ -8,13 +8,13 @@ import java.nio.ByteBuffer
  */
 interface IExtractor {
 
-    fun getMediaFormat() : MediaFormat
+    fun getMediaFormat(): MediaFormat
 
     fun getCurrentTimestamp(): Long
 
     fun readBuffer(byteBuffer: ByteBuffer): Int
 
-    fun seek(position: Long)
+    fun seekTo(position: Long): Long
 
     fun setStartPosition(position: Long)
 

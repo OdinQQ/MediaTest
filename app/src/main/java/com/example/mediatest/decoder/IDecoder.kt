@@ -1,4 +1,4 @@
-package com.example.mediatest
+package com.example.mediatest.decoder
 
 import android.media.MediaFormat
 
@@ -29,13 +29,13 @@ interface IDecoder {
 
     /*------------------- 信息 ---------------------*/
 
-    fun getWidth() : Int
+    var videoWidth: Int
 
-    fun getHeight() : Int
+    var videoHeight: Int
 
-    fun getDuration() : Long
+    var duration: Long
 
-    fun getMediaFormat() : MediaFormat
+    var mediaFormat: MediaFormat?
 
-    fun getTrack(): Int
+    var trackIndex: Int
 }

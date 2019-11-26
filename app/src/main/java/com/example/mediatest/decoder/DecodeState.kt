@@ -1,4 +1,4 @@
-package com.example.mediatest
+package com.example.mediatest.decoder
 
 enum class DecodeState {
 
